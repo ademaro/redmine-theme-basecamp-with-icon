@@ -79,6 +79,10 @@ h2, h3, h4, .wiki h1, .wiki h2, .wiki h3 { border-bottom: 0px; }
     background-color: #eaeaea;
 }
 
+.wiki h3 {
+    font-size: 16px;
+}
+
 h3, h4 { font-weight: normal; }
 
 #sidebar { 
@@ -262,4 +266,13 @@ div#activity dl {
     background-color: #FFECEC;
     border-radius: 7px;
     box-shadow: 0px 0px 1px 0px #888; 
+}
+
+code { 
+    font-family: 'Lucida Console', Monaco, monospace;
+    font-weight: normal;
+    background: #eee;
+    padding: 0px 3px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
