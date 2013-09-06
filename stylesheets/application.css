@@ -75,7 +75,7 @@ h2, h3, h4, .wiki h1, .wiki h2, .wiki h3 { border-bottom: 0px; }
 }
 
 .wiki h2 { 
-    margin: -6px -10px 10px; padding: 10px 20px; font-size: 16px; color: #000;
+    margin: -6px 0 10px; padding: 10px 20px; font-size: 16px; color: #000;
     background-color: #eaeaea;
 }
 
@@ -100,7 +100,7 @@ h3, h4 { font-weight: normal; }
 
 /* Links */
 
-#sidebar a:hover { background-color:#003399; color:#FFFFFF; text-decoration: none;}
+#sidebar .tag-label-color:hover { box-shadow: 0 1px 3px rgba(0,0,0,.5); }
 
 /* Menu */
 #main-menu { margin: 0 20px; }
@@ -275,4 +275,48 @@ code {
     padding: 0px 3px;
     border: 1px solid #ddd;
     border-radius: 3px;
+}
+#top-menu {
+  padding-bottom: 0;
+}
+#top-menu > ul > li > ul.menu-children {
+  top: 23px;
+  background: #333;
+  border: 1px solid #111;
+  border-top: none;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+#top-menu > ul > li > ul.menu-children > li {
+  padding: 0;
+}
+#top-menu > ul > li > ul.menu-children > li a {
+  display: block;
+  color: #eee;
+  margin-right: 0;
+  padding: 2px 5px;
+}
+#top-menu > ul > li > ul.menu-children > li a:hover {
+  background-color: #555;
+}
+#sidebar {
+  width: 15%;
+  border-radius: 0;
+  box-shadow: 0px 1px 2px 0px #CCC;
+}
+#content {
+  width: 80%;
+}
+table.list tbody td, 
+table.list tbody tr td {
+  font-size: 11px;
+}
+table.list tbody td.project, 
+table.list tbody td.parent {
+  max-width: 100px;
+  white-space: normal;
+  text-align: left;
+}
+table.list tbody td.parent a, 
+table.list tbody td.project a {
 }
