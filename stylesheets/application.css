@@ -27,13 +27,23 @@ p.subtitle {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333), color-stop(100%,#111));
     background: linear-gradient(to bottom, #333 0%,#111 100%) #222;
     padding: 8px 8px 4px 8px; height: 5.5em; 
+    height: auto;
 }
-#header h1 { 
-    margin: 0 20px; 
+#header > h1 { 
+    float: left;
+    margin: -8px 20px 0; 
     font-weight: bold;
     text-shadow: 1px 1px 3px #111;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 58%;
+    white-space: nowrap;
 }
-#header #quick-search { margin: 0 24px; }
+#header > #quick-search { margin: 0 24px; max-width: 35%; text-align: right; }
+#header input,
+#header > #quick-search > select { padding: 1px 3px; font-size: 12px; }
+#header > #quick-search > select { max-width: 50%; }
 #top-menu { background-color: #000; font-size: 11px; position: relative; padding: 2px 0; height: 21px }
 #top-menu ul { padding: 0 24px; }
 #top-menu li, #top-menu #loggedas { color: #ddd; line-height: 21px; margin-right: 4px; }
@@ -103,7 +113,9 @@ h3, h4 { font-weight: normal; }
 #sidebar .tag-label-color:hover { box-shadow: 0 1px 3px rgba(0,0,0,.5); }
 
 /* Menu */
-#main-menu { margin: 0 20px; }
+#main-menu { margin: 0 20px; max-width: 95%; }
+#main-menu > ul { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; }
+#main-menu li { display: inline-block; float: none; margin: 0; }
 #main-menu li a { background-color: #444; font-weight: normal; padding:6px 12px 8px 32px; }
 #main-menu li a:hover { background: #999; text-decoration: none; }
 #main-menu li a.selected, #main-menu li a.selected:hover { background-color:#EEEEEE; color: #111; font-weight:bold; }
@@ -144,7 +156,7 @@ table.list thead th a:hover { color: #000; }
 
 /* Issues grid styles by priorities (provided by Wynn Netherland) */
 table.list tr.issue a { color: #333; }
-
+/*
 tr.odd.priority-5, table.list tbody tr.odd.priority-5:hover { color: #900; font-weight: bold; }
 tr.odd.priority-5 { background: #ffc4c4; }
 tr.even.priority-5, table.list tbody tr.even.priority-5:hover { color: #900; font-weight: bold; }
@@ -172,6 +184,35 @@ tr.even.priority-1, table.list tbody tr.even.priority-1:hover { color: #559; }
 tr.even.priority-1 { background: #f2faff; }
 tr.priority-1 a { color: #559; }
 tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
+*/
+
+tr.odd.priority-high1, table.list tbody tr.odd.priority-high1:hover { color: #900; font-weight: bold; }
+tr.odd.priority-high1 { background: #ffc4c4; }
+tr.even.priority-high1, table.list tbody tr.even.priority-high1:hover { color: #900; font-weight: bold; }
+tr.even.priority-high1 { background: #ffd4d4; }
+tr.priority-high1 a, tr.priority-high1:hover a { color: #900; }
+tr.odd.priority-high1 td, tr.even.priority-high1 td { border-color: #ffb4b4; }
+
+tr.odd.priority-high2, table.list tbody tr.odd.priority-high2:hover { color: #900; }
+tr.odd.priority-high2 { background: #ffc4c4; }
+tr.even.priority-high2, table.list tbody tr.even.priority-high2:hover { color: #900; }
+tr.even.priority-high2 { background: #ffd4d4; }
+tr.priority-high2 a { color: #900; }
+tr.odd.priority-high2 td, tr.even.priority-high2 td { border-color: #ffb4b4; }
+
+tr.odd.priority-high3, table.list tbody tr.odd.priority-high3:hover { color: #900; }
+tr.odd.priority-high3 { background: #fee; }
+tr.even.priority-high3, table.list tbody tr.even.priority-high3:hover { color: #900; }
+tr.even.priority-high3 { background: #fff2f2; }
+tr.priority-high3 a { color: #900; }
+tr.odd.priority-high3 td, tr.even.priority-high3 td { border-color: #fcc; }
+
+tr.odd.priority-lowest, table.list tbody tr.odd.priority-lowest:hover { color: #559; }
+tr.odd.priority-lowest { background: #eaf7ff; }
+tr.even.priority-lowest, table.list tbody tr.even.priority-lowest:hover { color: #559; }
+tr.even.priority-lowest { background: #f2faff; }
+tr.priority-lowest a { color: #559; }
+tr.odd.priority-lowest td, tr.even.priority-lowest td { border-color: #add7f3; }
 
 p.breadcrumb {
 	background-color:#EEEEEE;
